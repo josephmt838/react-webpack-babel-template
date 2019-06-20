@@ -1,0 +1,36 @@
+{
+  "name": "react-webpack-babel-template",
+  "version": "1.0.0",
+  "description": "Template to start a webpack and babel app with front end react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josephmt838/react-webpack-babel-template.git"
+  },
+  "keywords": [
+    "react",
+    "webpack",
+    "webpack4",
+    "babel",
+    "babel7",
+    "reactjs"
+  ],
+  "author": "Joseph Thompson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josephmt838/react-webpack-babel-template/issues"
+  },
+  "homepage": "https://github.com/josephmt838/react-webpack-babel-template#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "path": "^0.12.7",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
