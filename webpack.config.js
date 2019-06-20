@@ -34,6 +34,11 @@ module.exports = {
       {
         test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
         loaders: ["file-loader"]
+      },
+      {
+        test: /\.js$/,
+        exclude: "/node_modules/",
+        use: ["babel-loader", "eslint-loader"]
       }
     ]
   }
