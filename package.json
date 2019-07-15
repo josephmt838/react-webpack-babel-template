@@ -7,10 +7,10 @@
     "webpack": "babel-node ./node_modules/webpack/bin/webpack",
     "start": "babel-node ./node_modules/webpack-dev-server/bin/webpack-dev-server --open",
     "lint": "npm run lint:js",
-    "lint:eslint": "eslint --ignore-path ./.gitignore --fix",
+    "lint:eslint": "eslint --fix",
     "lint:js": "npm run lint:eslint --fix .",
     "lint:staged": "lint-staged",
-    "lint:stylelint": "stylelint",
+    "lint:stylelint": "stylelint --fix",
     "lint:scss": "npm run lint:stylelint -- \"**/*.scss\"",
     "pretest": "npm run test:clean && npm run lint",
     "test:clean": "rimraf ./coverage",
@@ -50,31 +50,52 @@
     "babel-loader": "8.0.6",
     "coveralls": "^3.0.5",
     "cross-env": "^5.2.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "^3.3.5",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
     "file-loader": "4.0.0",
     "html-webpack-plugin": "3.2.0",
+    "husky": "^3.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
+    "lint-staged": "^9.2.0",
     "path": "0.12.7",
+    "prettier": "^1.18.2",
+    "stylelint": "^10.1.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-sass-guidelines": "^6.0.0",
+    "stylelint-prettier": "^1.1.1",
+    "stylelint-selector-bem-pattern": "^2.1.0",
     "webpack": "4.35.0",
     "webpack-cli": "3.3.4",
     "webpack-dev-server": "3.7.2"
   },
   "dependencies": {
     "css-loader": "3.0.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
     "node-sass": "4.12.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "./node_modules/.bin/eslint — fix",
+      "git add"
+    ]
   }
 }
