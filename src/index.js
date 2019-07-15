@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
-
-const App = () => <section>App Component</section>;
+import App from "./components/App";
 
 ReactDOM.render(<App />, document.getElementById("root"));
